@@ -1,0 +1,11 @@
+version: '2'
+services:
+  build:
+    image: ragnaroek/rust-raspberry:1.44.0
+    command: build --release
+    volumes:
+      - .:/home/cross/project
+      - cargo-cache:/usr/local/cargo
+
+volumes:
+  cargo-cache:
